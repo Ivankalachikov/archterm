@@ -1,0 +1,54 @@
+@import "bootstrap/mixins.less";
+@import "variables.less";
+
+body{
+	font-family: 'Cuprum',sans-serif;
+	font-size: 20px;
+	margin: 0;
+	min-width: 320px;
+}
+
+
+[class$='__inner']{
+	.container-fixed();
+	.clearfix();
+	@media (min-width: @screen-sm) {
+		width: @container-sm ;
+	}
+	@media (min-width: @screen-md) {
+		width: @container-md ;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: @container-lg ;
+	}
+
+}
+
+.-title-{
+	text-transform: uppercase;
+	font-size: 1.75rem;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	&:after{
+		content: '';
+		width: 15px;
+		height: 15px;
+		display: inline-block;
+		background-color: @orange;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		margin-top: -7px;
+	}
+
+	@media screen and (max-width:991px){
+		font-size: 1.25rem;
+	}
+}
+
+
+.slick-slide {outline: none;}
+
+
+

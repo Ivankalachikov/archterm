@@ -1,0 +1,91 @@
+@import "mixin.less";
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.fnav {
+	padding-top: 33px;
+	margin-bottom: 43px;
+	&:extend(.hidden-sm);
+	&:extend(.hidden-xs);
+
+	&__list{
+		list-style:none;
+		padding: 0;
+		margin: 0;
+		display: table;
+		table-layout: auto;
+		width: 100%;
+	}
+
+	&__item{
+		display: table-cell;
+		text-align: center;
+		font-size: .9rem;
+	}
+
+	&__link{
+		color: #fff;
+		text-decoration: none;
+
+		&:hover{
+			color: lighten(@orange,35);
+		}
+	}
+
+	&__link--active{
+		color: @orange;
+
+		&:hover{
+			color: @orange;
+		}
+	}
+
+	&__text{
+		font-size: .8rem;
+		color: #929292;
+		padding-left: 11px;
+		&:extend(.hidden-sm);
+		&:extend(.hidden-xs);
+	}
+
+	&__contacts{
+		font-size: .9rem;
+		margin-bottom: 20px;
+		.clearfix();
+
+		&-left-col{
+			.make-xs-column(12);
+			.make-md-column(5);
+			@media screen and (max-width:991px){
+				padding-right: 0;
+			}
+		}
+
+		&-right{
+			.make-xs-column(12);
+			.make-md-column(5);
+
+			@media screen and (max-width:991px){
+				padding-right: 0;
+			}
+		}
+
+		&-tel{
+			color: @orange;
+		}
+
+		&-email{
+			color: @orange;
+		}
+
+		&-link{
+			color: #fff;
+		}
+
+		&-site &-link{
+			color: @orange;
+		}
+
+		
+	}
+}

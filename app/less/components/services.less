@@ -1,0 +1,142 @@
+@import "mixin.less";
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.services {
+	
+	background: url("../img/services-bg.jpg") center bottom no-repeat;
+	//background-size: contain;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 90px;
+
+	@media screen and (max-width:991px){
+		padding-top: 10px;
+		background-size: contain;
+		padding-bottom: 20px;
+	}
+
+	&__title{
+		margin-bottom: 25px;
+	}
+	
+	&__all-items{
+		.make-row();
+		.make-md-column-offset(0);
+		.clearfix()
+	}
+
+	&__list{
+		.make-md-column(2.6);
+		.make-md-column-offset(1);
+		.make-sm-column(9);
+		.make-sm-column-offset(3);
+		.make-xs-column(8.1);
+		.make-xs-column-offset(3.2);
+		text-align: left;
+		list-style:none;
+		margin-bottom: 0;
+		margin-top: 0;
+
+		@media screen and (max-width:991px){
+			margin-top: -15px;
+			padding-right: 0;
+		}
+	}
+
+	&__list:first-child{
+		.make-md-column-offset(1.1);
+	}
+
+	&__item-title{
+		color: #000;
+		font-family: 'Cuprum',sans-serif;
+		font-size: 1rem;
+		margin-bottom: 5px;
+	}
+
+
+
+	&__item{
+		margin-bottom: 20px;
+		position: relative;
+		font-size: .74rem;
+		color: #7d7d7d;
+		font-family: "arial",sans-serif;
+
+		margin-bottom: 40px;
+
+		&::after{
+			content: '';
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(251,208,13,.65) 51%, rgba(251,208,13,.65) 100%),
+			url("../img/pattern.png") 0 0 repeat;
+			left: -90px;
+			top: -4px;
+		}
+
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: 10;
+			left: -84px;
+			top: 21px;
+		}
+
+		&--marine::before{
+			.sprite(@marine);
+			left: -84px;
+			top: 21px;
+		}
+
+		&--rjd::before{
+			.sprite(@rjd);
+			left: -80px;
+			top: 8px;
+		}
+
+		&--auto::before{
+			.sprite(@auto);
+			left: -80px;
+			top: 19px;
+		}
+
+		&--avia::before{
+			.sprite(@avia);
+			left: -80px;
+			top: 19px;
+		}
+
+		&--sborn::before{
+			.sprite(@sborn);
+			left: -70px;
+			top: 15px;
+		}
+
+		&--container::before{
+			.sprite(@container);
+			left: -75px;
+			top: 8px;
+		}
+
+		&--world::before{
+			.sprite(@world);
+			left: -78px;
+			top: 8px;
+		}
+
+		&--stech::before{
+			.sprite(@stech);
+			left: -73px;
+			top: 14px;
+		}
+
+		&--custom::before{
+			.sprite(@custom);
+			left: -75px;
+			top: 14px;
+		}
+	}
+}

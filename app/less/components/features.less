@@ -1,0 +1,65 @@
+@import "mixin.less";
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.features{
+	background-color: #dbe6ea;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	@media screen and (max-width:991px){
+		padding-top: 10px;
+	}
+
+	&__all-items{
+		.make-row();
+		.make-md-column-offset(0);
+		.clearfix();
+	}
+
+	&__list{
+		.make-md-column(3);
+		.make-xs-column(9.2);
+		.make-xs-column-offset(1.8);
+		.make-md-column-offset(.73);
+		text-align: left;
+		list-style:none;
+		margin-bottom: 0;
+		margin-top: 0;
+		@media screen and (max-width:991px){
+			padding-right: 0;
+		}
+	}
+
+	&__list:first-child{
+		.make-md-column-offset(.35);
+	}
+
+	&__item{
+		margin-bottom: 20px;
+		position: relative;
+
+		&::after{
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border:12px solid #fff;
+			background-color: #9dd5b2;
+			border-radius:50%;
+			left: -50px;
+			top: 5px;
+		}
+
+
+	}
+
+	&__list:nth-child(1) &__item:nth-child(3)::after,
+	&__list:nth-child(3) &__item:nth-child(2)::after,
+	&__list:nth-child(3) &__item:nth-child(4)::after,{
+		top: -5px;
+	}
+
+
+}

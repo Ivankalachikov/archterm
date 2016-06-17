@@ -1,0 +1,35 @@
+@import "mixin.less";
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.bline{
+	background-color: #202020;
+	color: #929292;
+	font-size: .8rem;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	.clearfix();
+	@media screen and (max-width:991px){
+		text-align: center;
+	}
+
+	&__copyright{
+		float: left;
+		@media screen and (max-width:991px){
+			float: none;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__by{
+		float: right;
+		@media screen and (max-width:991px){
+			float: none;
+		}
+	}
+
+	&__link{
+		color: #c1c1c1;
+		text-decoration: none;
+	}
+}

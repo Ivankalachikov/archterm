@@ -1,0 +1,79 @@
+@import "mixin.less";
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.partners{
+
+	&__items{
+		border-top: 1px solid #d3d3d3;
+		border-bottom: 1px solid #d3d3d3;
+		position: relative;
+	}
+
+	&__inner{
+		width: 80%;
+		margin: 0 auto;
+		@media screen and (max-width:991px){
+			width: 70%;
+			margin: 0 auto;
+		}
+	}
+
+	&__item{
+		padding: 35px;
+		vertical-align: middle;
+	}
+
+	text-align: center;
+
+	&__img--1{
+		.sprite(@partners1);
+	}
+
+	&__img--2{
+		.sprite(@partners2);
+	}
+
+	&__img--3{
+		.sprite(@partners3);
+	}
+
+	&__img--4{
+		.sprite(@partners4);
+	}
+
+	&__img--5{
+		.sprite(@partners5);
+	}
+
+	&__img--6{
+		.sprite(@partners6);
+	}
+
+	&__arrows{
+		position: absolute;
+		top: 33%;
+		font-weight: 700;
+		font-size: 2rem;
+		cursor: pointer;
+
+		@media screen and (max-width:991px){
+			display: none;
+		}
+	}
+
+	&__prev{
+		left: 5vw;
+		@media screen and (max-width:991px){
+			left: 3vw;
+		}
+	}
+
+	&__next{
+		right: 5vw;
+		@media screen and (max-width:991px){
+			right: 3vw;
+		}
+
+	}
+}

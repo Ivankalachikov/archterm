@@ -1,0 +1,36 @@
+@import "mixin.less";
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.relations{
+
+	&__list{
+		list-style:none;
+		padding-left: 0;
+	}
+
+	&__item{
+		display: inline-block;
+		padding-left: 15px;
+		position: relative;
+
+		@media screen and (max-width:991px){
+			display: block;
+		}
+
+		&::after{
+			content: '';
+			width: 4px;
+			height: 4px;
+			background-color: #cbb013;
+			position: absolute;
+			left: 6px;
+			top: 50%;
+			margin-top: -2px;
+
+			@media screen and (max-width:991px){
+				top: 12px;
+			}
+		}
+	}
+}

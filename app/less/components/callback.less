@@ -1,0 +1,57 @@
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+.callback{
+
+	.make-xs-column(12);
+	.make-md-column(2);
+	
+	color: @orange;
+	font-size: 0.85rem;
+	padding-top: 13px;
+	text-align: center;
+
+
+	@media screen and (max-width:991px) {
+		background-color: #1a1a18;
+		text-align: center;
+		padding-bottom: 15px;
+		.make-row();
+		//margin-left: -15px;
+
+	}
+
+
+	&__tel{
+		color: @orange;
+		text-decoration: none;
+
+		@media screen and (max-width:991px){
+			margin-right: 10px;
+		}
+
+		&:hover{
+			color: darken(@orange,3);
+		}
+	}
+
+	&__icon{
+		color: @orange;
+		margin-right: 2px;
+	}
+
+	&__btn{
+		margin-top: 5px;
+		background-color: @orange;
+		display: inline-block;
+		padding: 6px 20px;
+		color: #1a1a18;
+		border-radius:3px;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		&:hover{
+			background-color: darken(@orange,3);
+		}
+	}
+}
