@@ -50,16 +50,12 @@
 			border-radius:50%;
 			left: -50px;
 			top: 5px;
+			@media screen and (max-width:991px){
+				top: 50%;
+				margin-top: -16px;
+			}
 		}
 
 
 	}
-
-	&__list:nth-child(1) &__item:nth-child(3)::after,
-	&__list:nth-child(3) &__item:nth-child(2)::after,
-	&__list:nth-child(3) &__item:nth-child(4)::after,{
-		top: -5px;
-	}
-
-
 }
