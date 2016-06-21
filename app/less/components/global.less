@@ -1,6 +1,10 @@
 @import "bootstrap/mixins.less";
 @import "variables.less";
 
+html{
+	font-size: 22px;
+}
+
 body{
 	font-family: 'Cuprum',sans-serif;
 	font-size: 20px;
@@ -26,20 +30,21 @@ body{
 
 .-title-{
 	text-transform: uppercase;
-	font-size: 1.75rem;
+	font-size: 1.6rem;
 	position: relative;
 	display: inline-block;
 	text-align: center;
+	padding-left: 25px;
 	&:after{
 		content: '';
-		width: 15px;
-		height: 15px;
+		width: 17px;
+		height: 17px;
 		display: inline-block;
 		background-color: @orange;
 		position: absolute;
-		left: -30px;
+		left: -6px;
 		top: 50%;
-		margin-top: -7px;
+		margin-top: -10px;
 	}
 
 	@media screen and (max-width:991px){

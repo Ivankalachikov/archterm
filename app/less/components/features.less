@@ -5,11 +5,25 @@
 .features{
 	background-color: #dbe6ea;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 3px;
 	padding-bottom: 30px;
+
+	@media screen and (min-width:991px){
+		padding-bottom: 0;
+	}
 
 	@media screen and (max-width:991px){
 		padding-top: 10px;
+	}
+
+	&__title::after{
+		background-color: #83aab8;
+	}
+
+	&__title{
+		@media screen and (min-width:991px){
+			margin-bottom: 7px;
+		}
 	}
 
 	&__all-items{
@@ -36,8 +50,22 @@
 		.make-md-column-offset(.35);
 	}
 
+	&__list:nth-child(2),
+	&__list:nth-child(3),{
+		@media screen and (min-width:991px){
+			padding-top: 20px;
+		}
+	}
+
+	&__list:nth-child(2) &__item,
+	&__list:nth-child(3) &__item,{
+		@media screen and (min-width:991px){
+			margin-bottom: 18px;
+		}
+	}
+
 	&__item{
-		margin-bottom: 20px;
+		margin-bottom: 22px;
 		position: relative;
 
 		&::after{
@@ -55,7 +83,5 @@
 				margin-top: -16px;
 			}
 		}
-
-
 	}
 }

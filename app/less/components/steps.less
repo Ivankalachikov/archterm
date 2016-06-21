@@ -5,14 +5,14 @@
 .steps{
 	&__inner{
 		text-align: center;
-		padding-top: 20px;
+		padding-top: 5px;
 		margin-bottom: 130px;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
 	&__title{
-		margin-bottom: 80px;
+		margin-bottom: 62px;
 	}
 
 	&__all-items{
@@ -21,24 +21,27 @@
 	}
 
 	&__item:first-child{
-		.make-md-column-offset(1);
+		.make-md-column-offset(.66);
 	}
 	
 	&__item{
-		.make-md-column(.95);
+		.make-md-column(1.02);
 		.make-xs-column(11.5);
 		height: 150px;
 		position: relative;
+		@media screen and (max-width:991px){
+			margin-left: -10px;
+		}
 
 		&:after{
 			content: '';
 			position: absolute;
-			width: 96px;
-			height: 96px;
+			width: 110px;
+			height: 110px;
 			top: 50%;
-			margin-top: -48px;
+			margin-top: -55px;
 			left: 50%;
-			margin-left: -48px;
+			margin-left: -55px;
 			display: inline-block;
 			border-radius:50%;
 			background: url("../img/pattern.png") 0 0 repeat;
@@ -141,7 +144,7 @@
 		position: absolute;
 		width: 160px;
 		text-align: center;
-		margin-left: -30px;
+		margin-left: -25px;
 	}
 
 	&__item:first-child{
@@ -154,6 +157,27 @@
 
 	&__item--8 > .steps__text{
 		margin-top: -18px;
+	}
+
+	&__item--5 > .steps__text{
+		@media screen and (min-width:991px){
+			width: 94px;
+			margin-left: 5px;
+		}
+	}
+
+	&__item--8 > .steps__text{
+		@media screen and (min-width:991px){
+			width: 94px;
+			margin-left: 5px;
+		}
+	}
+
+	&__item--3 > .steps__text{
+		@media screen and (min-width:991px){
+			width: 170px;
+			margin-left: -27px;
+		}
 	}
 
 	&__item--1 .steps__num::before{
@@ -213,7 +237,7 @@
 			position: absolute;
 			text-align: left;
 			top: auto;
-			left: 52%;
+			left: 54%;
 			margin-top: 60px;
 			margin-left: 0;
 		}
@@ -232,7 +256,7 @@
 			position: absolute;
 			top: 40%;
 			bottom: auto;
-			left: 45%;
+			left: 48%;
 		}
 
 		&__item:nth-child(2) .steps__num,
